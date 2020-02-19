@@ -7,7 +7,8 @@ import { IonicModule } from '@ionic/angular';
 import { ClassroomPageRoutingModule } from './classroom-routing.module';
 
 import { ClassroomPage } from './classroom.page';
-import {AppModule} from '../../app.module';
+import {TwilioComponent} from '../../components/twilio/twilio.component';
+import {TwilioService} from '../../components/twilio/services/twilio.service';
 
 @NgModule({
     imports: [
@@ -15,8 +16,8 @@ import {AppModule} from '../../app.module';
         FormsModule,
         IonicModule,
         ClassroomPageRoutingModule,
-        AppModule
     ],
-  declarations: [ClassroomPage]
+    providers: [TwilioService],
+    declarations: [ClassroomPage, TwilioComponent]
 })
 export class ClassroomPageModule {}

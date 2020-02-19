@@ -12,7 +12,6 @@ import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { FormsModule } from '@angular/forms';
-import {TwilioComponent} from './components/twilio/twilio.component';
 
 @NgModule({
   imports: [
@@ -26,10 +25,9 @@ import {TwilioComponent} from './components/twilio/twilio.component';
       enabled: environment.production
     })
   ],
-  declarations: [AppComponent, TwilioComponent],
+  declarations: [AppComponent],
   providers: [InAppBrowser, SplashScreen, StatusBar],
   exports: [
-    TwilioComponent
   ],
   bootstrap: [AppComponent]
 })
