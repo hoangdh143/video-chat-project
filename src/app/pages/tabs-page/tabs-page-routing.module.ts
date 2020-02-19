@@ -58,6 +58,15 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'classroom',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../classroom/classroom.module').then(m => m.ClassroomPageModule)
+          }
+        ]
+      },
+      {
         path: '',
         redirectTo: '/app/tabs/schedule',
         pathMatch: 'full'
